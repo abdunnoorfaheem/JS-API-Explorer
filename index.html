@@ -9,12 +9,71 @@
 
 <body>
     <h1>JS-API-Explorer</h1>
+    <div id="divOne">
+
+    </div>
+
+    <div class="divTwo">
+
+    </div>
 
     <script>
-        fetch('https://jsonplaceholder.typicode.com/todos/1')
+        // fetch('https://jsonplaceholder.typicode.com/todos/1')
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         console.log(data.title);
+
+        //         let p = document.createElement("p");
+        //         p.innerHTML = `${data.title}`;
+        //         let div = document.getElementById("divOne");
+
+        //         div.appendChild(p);
+        //     });
+
+
+
+        // fetch('https://jsonplaceholder.typicode.com/photos')
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         data.forEach((item) => {
+
+
+        //             console.log(item.title);
+
+        //             let p = document.createElement("p");
+        //             p.innerHTML = `${item.title}`;
+
+        //             document.getElementById("divOne").appendChild(p);
+
+
+
+
+
+
+        //         })
+        //     })
+
+
+
+
+        fetch('https://dummyjson.com/products')
             .then(response => response.json())
             .then(data => {
-                console.log(data.title);
+                data.products.forEach((item) => {
+                    console.log(item);
+
+                    let p = document.createElement("p");
+                    p.innerHTML = `<h2>${item.title}</h2>
+                    
+                    <img  src="${item.thumbnail}" alt="">
+
+                    <p><b>Price : ${item.price}</b></p>
+                    <p><b>Ratings : ${item.rating}</b></p>
+                    
+                    `;
+                    document.getElementById("divOne").appendChild(p);
+
+                })
 
             })
     </script>
