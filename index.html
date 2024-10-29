@@ -8,8 +8,8 @@
 </head>
 
 <body>
-    <h1>JS-API-Explorer</h1>
-    <div id="divOne">
+    <h1 style="text-align: center;">JS-API-Explorer</h1>
+    <div id="divOne" style="display: flex; flex-wrap: wrap; column-gap: 24px; justify-content: center;">
 
     </div>
 
@@ -63,6 +63,16 @@
                     console.log(item);
 
                     let p = document.createElement("p");
+
+                    p.style.background = "#99c1ad"
+                    p.style.padding = "5px"
+                    p.style.borderRadius = "12px"
+                    p.style.height = "512px"
+                    p.style.width = "712px"
+                    p.style.textAlign = "center"
+                    p.style.boxShadow = "5px 5px 20px "
+
+
                     p.innerHTML = `<h2>${item.title}</h2>
                     
                     <img  src="${item.thumbnail}" alt="">
